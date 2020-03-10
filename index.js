@@ -38,8 +38,8 @@ resetNumber = () => {
           {this.state.num}
         </h2>
         <div>
-          <button onClick={ this.increaseNumber }> + </button>
           <button onClick={ this.decreaseNumber }> - </button>
+          <button onClick={ this.increaseNumber }> + </button>
           <button onClick={ this.resetNumber }> Reset </button>
         </div>
       </div>
