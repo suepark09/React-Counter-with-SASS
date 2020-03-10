@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 import './style.scss';
+import logo from './react-logo.png'; 
 
 class App extends Component {
   constructor() {
@@ -32,15 +33,19 @@ resetNumber = () => {
 
   render() {
     return (
-      <div class="container">
-        <h1>React Counter</h1>
-        <h2>
+      <div className="container">
+        <div className="title">
+          <h1>React Counter</h1>
+        </div>
+        <div className="num-container">
+          <h2>
           {this.state.num}
-        </h2>
+          </h2>
+        </div>
         <div>
           <button onClick={ this.decreaseNumber }> - </button>
           <button onClick={ this.increaseNumber }> + </button>
-          <button onClick={ this.resetNumber }> Reset </button>
+          <button className="reset-btn" onClick={ this.resetNumber }> Reset </button>
         </div>
       </div>
     );

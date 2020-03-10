@@ -1,14 +1,58 @@
 $Helvetica: helvetica; 
+$test: 1px solid red;
+$light-blue: #61DBFC;
+$dark-grey: #202020;
 
-h2 {
+%flex-shared {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  justify-content: center; 
+}
+
+body {
+  background-color: $dark-grey; 
   font-family: $Helvetica;
 }
 
+h1 {
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  color: white; 
+  font-size: 35pt; 
+  margin: 0;
+}
+
 .container {
-  border: 1px solid grey; 
+  text-align: center;
   border-radius: 5px;
   padding: 10px; 
   display: flex;
   flex-direction: column; 
   justify-content: center;
+
+  div {
+    @extend %flex-shared;
+
+    button {
+      padding: 6px 18px;
+      margin: 5px; 
+      font-size: 11pt; 
+      border: 1px solid $light-blue; 
+      color: $light-blue;
+      background-color: $dark-grey;
+    }
+
+    .reset-btn {
+      color: $dark-grey;
+      background-color: $light-blue;
+    }
+  }
+}
+
+.num-container {
+  padding: 15px; 
 }
