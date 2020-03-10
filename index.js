@@ -24,6 +24,12 @@ decreaseNumber = () => {
   })
 }
 
+resetNumber = () => {
+  this.setState({
+    num: 0
+  })
+}
+
   render() {
     return (
       <div class="container">
@@ -31,8 +37,11 @@ decreaseNumber = () => {
         <h2>
           {this.state.num}
         </h2>
-        <button onClick={ this.increaseNumber }>+</button>
-        <button onClick={ this.decreaseNumber }>-</button>
+        <div>
+          <button onClick={ this.increaseNumber }> + </button>
+          <button onClick={ this.decreaseNumber }> - </button>
+          <button onClick={ this.resetNumber }> Reset </button>
+        </div>
       </div>
     );
   }
