@@ -1,3 +1,3 @@
-# react-b6q4py
+# React Counter
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-b6q4py)
+Practice counter app using React and SASS. 
